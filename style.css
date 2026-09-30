@@ -317,3 +317,14 @@ li {
     font-size: 25px;
   }
 }
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.year-heading {
+  margin-top: 32px;
+}
+
