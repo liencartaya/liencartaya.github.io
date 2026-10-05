@@ -251,21 +251,15 @@ li { margin-bottom: 8px; }
 
 .page-hero img {
   width: 100%;
-  max-height: 160px;
-  height: 160px;
+  height: 175px;
   object-fit: cover;
   object-position: center;
   display: block;
   border-radius: 4px;
-  margin-bottom: 18px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 760px) {
   .page-hero img {
-    height: 100px;
-  }
-
-  .page-hero-text h1 {
-    font-size: 28px;
+    height: 125px;
   }
 }
