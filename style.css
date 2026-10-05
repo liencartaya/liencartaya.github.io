@@ -200,10 +200,10 @@ li {
 
 .home-grid {
   display: grid;
-  grid-template-columns: 230px minmax(0, 1fr);
-  gap: 42px;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: 46px;
   align-items: start;
-  margin-bottom: 42px;
+  margin-bottom: 44px;
 }
 
 .home-card {
@@ -214,8 +214,8 @@ li {
 
 .profile-photo {
   width: 100%;
-  max-width: 195px;
-  aspect-ratio: 4 / 5;
+  max-width: 260px;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: center;
   border-radius: 6px;
