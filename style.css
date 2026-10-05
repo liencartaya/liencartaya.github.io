@@ -576,11 +576,10 @@ li {
 }
 
 .service-entry-main {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 340px;
-  gap: 28px;
-  align-items: start;
+  grid-template-columns: minmax(0, 1fr) 240px;
+  gap: 24px;
 }
+
 
 .service-entry-text p {
   margin: 0;
@@ -588,11 +587,11 @@ li {
 
 .service-entry-main img {
   width: 100%;
-  height: 210px;
-  display: block;
-  border-radius: 8px;
+  height: 150px;
   object-fit: cover;
-  object-position: center 72%;
+  object-position: center 75%;
+  border-radius: 8px;
+}-position: center 72%;
 }
 
 @media (max-width: 900px) {
@@ -602,22 +601,8 @@ li {
   }
 
   .service-entry-main img {
-    max-width: 420px;
+    max-width: 360px;
     height: auto;
   }
 }
 
-/* Smaller Summer School photo on Service page */
-
-.service-entry-main {
-  grid-template-columns: minmax(0, 1fr) 240px;
-  gap: 24px;
-}
-
-.service-entry-main img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  object-position: center 75%;
-  border-radius: 8px;
-}
