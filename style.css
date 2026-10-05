@@ -568,3 +568,44 @@ li {
     font-size: 14px;
   }
 }
+
+/* Service featured photo */
+
+.service-feature {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+  padding: 16px 0 22px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.service-feature img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  display: block;
+}
+
+.service-feature-text p {
+  margin: 0 0 8px;
+}
+
+.service-feature-text .entry-date {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+@media (max-width: 760px) {
+  .service-feature {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .service-feature img {
+    height: auto;
+    max-height: none;
+  }
+}
