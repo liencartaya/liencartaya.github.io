@@ -329,44 +329,52 @@ li {
 /* Research group photos */
 
 .group-gallery {
-  margin-top: 24px;
+  max-width: 900px;
+  margin: 24px auto 36px;
+}
+
+.group-gallery h2 {
+  margin-bottom: 22px;
 }
 
 .group-photo-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 34px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px;
+  align-items: start;
   margin-top: 20px;
 }
 
 .group-photo-card {
   margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+  overflow: hidden;
 }
 
 .group-photo-card img {
-  width: 70%;
-  max-width: 660px;
-  max-height: 430px;
+  width: 100%;
+  height: 220px;
   display: block;
-  border-radius: 6px;
   object-fit: cover;
   object-position: center;
+  border-radius: 0;
 }
 
 .group-photo-card figcaption {
-  max-width: 660px;
-  margin-top: 10px;
-  padding-left: 2px;
+  margin: 0;
+  padding: 12px 14px 14px;
   color: var(--muted);
-  font-size: 15px;
-  line-height: 1.5;
+  font-size: 14px;
+  line-height: 1.45;
 }
 
 .caption-title {
   display: block;
   color: var(--text);
   font-weight: 500;
-  margin-bottom: 2px;
+  margin-bottom: 3px;
 }
 
 .caption-names {
@@ -408,7 +416,7 @@ li {
   }
 
   .home-card {
-    max-width: 280px;
+    max-width: 360px;
   }
 
   .entry {
@@ -433,6 +441,20 @@ li {
 
   .hero-title {
     font-size: 27px;
+  }
+
+  .group-gallery {
+    max-width: 100%;
+  }
+
+  .group-photo-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .group-photo-card img {
+    height: auto;
+    max-height: none;
   }
 }
 
@@ -463,10 +485,6 @@ li {
 
   .home-text h1 {
     font-size: 30px;
-  }
-
-  .group-photo-card img {
-    max-height: 320px;
   }
 
   .group-photo-card figcaption {
