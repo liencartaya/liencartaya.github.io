@@ -226,6 +226,18 @@ li {
   margin: 0 auto 14px;
 }
 
+/* Force natural profile photo proportions */
+
+.home-card .profile-photo {
+  width: 100% !important;
+  max-width: 320px !important;
+  height: auto !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+  margin: 0 auto 14px !important;
+}
+
 .home-card p {
   margin: 10px 0;
   color: var(--muted);
