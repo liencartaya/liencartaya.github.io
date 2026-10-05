@@ -4,6 +4,7 @@ https://liencartaya.github.io/research-group.html
 https://liencartaya.github.io/publications.html
 https://liencartaya.github.io/talks.html
 https://liencartaya.github.io/teaching.html
+https://liencartaya.github.io/service.html
 https://liencartaya.github.io/resources.html
 https://liencartaya.github.io/cv.html
 https://liencartaya.github.io/contact.html
