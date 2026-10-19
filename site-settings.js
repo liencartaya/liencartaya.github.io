@@ -46,7 +46,7 @@
     "Notes":"Apuntes","videos":"videos","Short course":"Cursillo","Invisible Patterns: Changing without changing":"Patrones invisibles: cambiar sin cambiar",
     "Organizing Committee, Summer School for Undergraduates in Mathematics.":"Comité organizador, Escuela de Verano de Matemáticas para estudiantes de pregrado.",
     "Institute of Mathematics, Universidad de Talca":"Instituto de Matemáticas, Universidad de Talca","Tutor, Summer School for undergraduates in Mathematics.":"Profesora Ayudante, Escuela de Verano de Matemáticas para estudiantes de pregrado.",
-    "Exercises on":"Ejercicios sobre","Finite subgroups of":"Subgrupos finitos de","School taught by":"Curso impartido por","Instructor, Club de Matemáticas Yachay Tech.":"Profesora, Club de Matemáticas Yachay Tech.","(with":"(con",", Carlos Ajila, Luis Cardenas and":", Carlos Ajila, Luis Cardenas y",
+    "Exercises on":"Ejercicios sobre","Finite subgroups of":"Subgrupos finitos de","School taught by":"Curso impartido por",". School taught by":". Curso impartido por","Instructor, Club de Matemáticas Yachay Tech.":"Profesora, Club de Matemáticas Yachay Tech.","(with":"(con",", Carlos Ajila, Luis Cardenas and":", Carlos Ajila, Luis Cardenas y",
     "Notes and study material":"Apuntes y material de estudio","Weekly problem-solving seminar based on V. Kac's":"Seminario semanal de resolución de problemas basado en",
     "We studied the book and discussed solutions to selected exercises.":"Estudiamos el libro y comentamos soluciones a ejercicios seleccionados.",
     "Solutions and notes":"Soluciones y apuntes","Guide for international students at":"Guía para estudiantes internacionales del",
