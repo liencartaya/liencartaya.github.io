@@ -903,7 +903,7 @@ body {
 
 /* Contact uses the submitted books-and-flowers photo as its only image. */
 .contact-hero { height: 270px; }
-.contact-hero img { object-position: center 70%; }
+.contact-hero img { object-position: center 72%; }
 @media (max-width: 760px) {
   .contact-hero { height: 190px; }
 }
