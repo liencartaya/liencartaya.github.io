@@ -767,3 +767,25 @@ a:hover { color: var(--accent); }
   margin: 18px 0;
   border-radius: 4px;
 }
+
+
+/* Contact books photo: frame the books and flower stickers from the office photo. */
+.contact-books-frame {
+  position: relative;
+  width: min(100%, 220px);
+  height: 230px;
+  margin: 18px 0;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.contact-books-frame .contact-books-photo {
+  position: absolute;
+  top: -250px;
+  left: 0;
+  display: block;
+  width: 660px;
+  max-width: none;
+  height: auto;
+  margin: 0;
+  border-radius: 0;
+}
