@@ -758,3 +758,12 @@ a:hover { color: var(--accent); }
   .page-hero:not(.contact-hero) { padding: 18px 16px; }
   .home-hero { padding: 20px 16px; }
 }
+
+
+.contact-books-photo {
+  display: block;
+  width: min(100%, 280px);
+  height: auto;
+  margin: 18px 0;
+  border-radius: 4px;
+}
