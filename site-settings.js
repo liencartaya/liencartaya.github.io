@@ -79,7 +79,7 @@
     document.querySelector("[data-language-toggle]").textContent = "EN";
     document.querySelector("[data-language-toggle]").setAttribute("aria-label", "Cambiar idioma a inglés");
     const theme = document.documentElement.dataset.theme;
-    document.querySelector("[data-theme-toggle]").textContent = theme === "dark" ? "Modo claro" : "Modo oscuro";
+    document.querySelector("[data-theme-toggle]").textContent = theme === "dark" ? "Claro" : "Oscuro";
     const nav = document.querySelector(".nav");
     if (nav) nav.setAttribute("aria-label", "Navegación principal");
   };
@@ -88,7 +88,7 @@
   document.documentElement.dataset.theme = theme;
   const themeButton = document.querySelector("[data-theme-toggle]");
   const languageButton = document.querySelector("[data-language-toggle]");
-  const updateThemeLabel = () => { themeButton.textContent = document.documentElement.dataset.theme === "dark" ? (language === "es" ? "Modo claro" : "Light mode") : (language === "es" ? "Modo oscuro" : "Dark mode"); };
+  const updateThemeLabel = () => { themeButton.textContent = document.documentElement.dataset.theme === "dark" ? (language === "es" ? "Claro" : "Light") : (language === "es" ? "Oscuro" : "Dark"); };
   themeButton.addEventListener("click", () => {
     const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
     document.documentElement.dataset.theme = next; localStorage.setItem("site-theme", next); updateThemeLabel();
