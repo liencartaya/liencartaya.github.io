@@ -5,7 +5,7 @@
   --accent: #a52b5a;
   --accent-dark: #842044;
   --line: #dadce0;
-  --soft: #f8fafa;
+  --soft: #f3f3f3;
 }
 
 * {
@@ -439,7 +439,7 @@ li {
   display: block;
   object-fit: contain;
   object-position: center top;
-  background: #f8fafa;
+  background: #f3f3f3;
   border-radius: 0;
 }
 
@@ -609,7 +609,7 @@ li {
   --accent: #a52b5a;
   --accent-dark: #842044;
   --line: #dadce0;
-  --soft: #f8fafa;
+  --soft: #f3f3f3;
 }
 
 body { color: var(--text); line-height: 1.55; }
@@ -623,7 +623,7 @@ a:hover { color: var(--accent); }
 .site-name { color: var(--accent-dark); font-weight: 650; }
 .nav { gap: 8px 15px; }
 .nav a {
-  color: #526568;
+  color: #5f6368;
   font-size: .82rem;
   text-transform: none;
   letter-spacing: 0;
@@ -641,7 +641,7 @@ a:hover { color: var(--accent); }
   overflow: visible;
   border-radius: 0;
   border-left: 4px solid var(--accent);
-  background: linear-gradient(105deg, #eff8f8 0%, #f8fbfb 55%, #ffffff 100%);
+  background: linear-gradient(105deg, #f0f0f0 0%, #fafafa 55%, #ffffff 100%);
   padding: 22px 24px;
   margin-bottom: 30px;
 }
@@ -664,7 +664,7 @@ a:hover { color: var(--accent); }
   justify-content: flex-start;
   border-left: 4px solid var(--accent);
   border-radius: 0;
-  background: linear-gradient(105deg, #eff8f8 0%, #f8fbfb 55%, #ffffff 100%);
+  background: linear-gradient(105deg, #f0f0f0 0%, #fafafa 55%, #ffffff 100%);
   padding: 24px;
 }
 .home-hero::after { display: none; }
@@ -768,18 +768,18 @@ a:hover { color: var(--accent); }
   --muted: #5f6368;
   --accent: #a52b5a;
   --accent-dark: #842044;
-  --line: #d6dfe3;
-  --soft: #f5f8fa;
+  --line: #d8d8d8;
+  --soft: #f3f3f3;
 }
 :root[data-theme="dark"] {
   color-scheme: dark;
   --bg: #0d1218;
   --text: #e7edf2;
-  --muted: #a8b4bf;
+  --muted: #b0b0b0;
   --accent: #a52b5a;
   --accent-dark: #d06c8c;
-  --line: #2a3740;
-  --soft: #151e26;
+  --line: #34373a;
+  --soft: #17191c;
 }
 body {
   background: var(--bg);
@@ -861,19 +861,19 @@ body {
   border-top-color: var(--accent);
   box-shadow: 0 2px 16px rgba(0,0,0,.24);
 }
-:root[data-theme="dark"] .nav a { color: #b5c4ce; }
+:root[data-theme="dark"] .nav a { color: #b8b8b8; }
 :root[data-theme="dark"] .nav a:hover,
 :root[data-theme="dark"] .nav a.active { color: var(--accent-dark); }
 :root[data-theme="dark"] .page-hero:not(.contact-hero) {
-  background: linear-gradient(105deg, #151f28 0%, #111a22 62%, #0d1218 100%);
+  background: linear-gradient(105deg, #202124 0%, #17191c 62%, #0d1218 100%);
 }
 :root[data-theme="dark"] .home-card {
-  background: #111a22;
+  background: #17191c;
   border-color: var(--line);
 }
 :root[data-theme="dark"] .entry { border-bottom-color: var(--line); }
 :root[data-theme="dark"] .group-photo-card img {
-  background: #111a22;
+  background: #17191c;
 }
 :root[data-theme="dark"] .group-photo-card { background: var(--bg); }
 :root[data-theme="dark"] .publication { background: transparent; }
