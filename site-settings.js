@@ -40,7 +40,7 @@
     "Teaching experience, courses, and tutoring.":"Experiencia docente, cursos y tutorías.",
     "Mathematics Tutor,":"Tutora de Matemáticas,","Online mathematics tutoring in English.":"Tutorías de matemáticas en línea en inglés.",
     "Instructor, Preparatory Mathematics.":"Profesora de Curso Propedéutico para ingenierías.","Lecturer, Precalculus and Calculus.":"Profesora de Precálculo y Cálculo.",
-    "Commercial Engineering,":"Ingeniería Comercial,","Teaching Assistant,":"Ayudante docente,","Statistics and Probability, Calculus, Linear Algebra, and ODEs.":"Estadística y Probabilidad, Cálculo, Álgebra Lineal y EDO.",
+    "Commercial Engineering,":"Ingeniería Comercial,","Teaching Assistant,":"Profesor Ayudante,","Teaching Assistant, Universidad de La Habana.":"Profesor Ayudante, Universidad de La Habana.","Statistics and Probability, Calculus, Linear Algebra, and ODEs.":"Estadística y Probabilidad, Cálculo, Álgebra Lineal y EDO.",
     "Calculus, Linear Algebra, and Real Analysis.":"Cálculo, Álgebra Lineal y Análisis Real.",
     "Academic service and outreach":"Servicio académico y divulgación","Instructor,":"Profesora,","Minicourse":"Cursillo","An introduction to Gröbner bases.":"Introducción a las bases de Gröbner.",
     "Notes":"Apuntes","videos":"videos","Short course":"Cursillo","Invisible Patterns: Changing without changing":"Patrones invisibles: cambiar sin cambiar",
