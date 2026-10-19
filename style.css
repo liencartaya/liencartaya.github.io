@@ -902,8 +902,12 @@ body {
 
 
 /* Contact uses the submitted books-and-flowers photo as its only image. */
-.contact-hero { height: 270px; }
-.contact-hero img { object-position: center 72%; }
+.contact-hero { height: 220px; margin-bottom: 18px; }
+.contact-hero img { object-position: center 40%; }
+.contact-details { padding-bottom: 0; margin-bottom: 0; border-bottom: 0; }
+.contact-details p { margin-bottom: 8px; }
+.contact-details p:last-child { margin-bottom: 0; }
 @media (max-width: 760px) {
-  .contact-hero { height: 190px; }
+  .contact-hero { height: 160px; margin-bottom: 14px; }
+  .contact-details p { margin-bottom: 6px; }
 }
