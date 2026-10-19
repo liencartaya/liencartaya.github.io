@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
   <meta name="author" content="Lien Cartaya">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://liencartaya.github.io/teaching.html">
-  <link rel="stylesheet" href="style.css?v=24">
+  <link rel="stylesheet" href="style.css?v=27">
   <link rel="icon" type="image/png" href="assets/favicon-flower.png?v=3">
   <link rel="shortcut icon" type="image/png" href="assets/favicon-flower.png?v=3">
 </head>
@@ -29,6 +29,10 @@
       <a href="cv.html">CV</a>
       <a href="contact.html">Contact</a>
     </nav>
+    <div class="site-controls" aria-label="Site preferences">
+      <button class="site-control" type="button" data-theme-toggle>Light mode</button>
+      <button class="site-control language-toggle" type="button" data-language-toggle aria-label="Switch language to Spanish">ES</button>
+    </div>
   </div>
 </header>
 
@@ -54,5 +58,6 @@
       <p>© Lien Cartaya</p>
     </div>
   </footer>
+  <script src="site-settings.js?v=1" defer></script>
 </body>
 </html>
