@@ -921,3 +921,27 @@ body {
   }
   .home-card, .home-text { max-width: none; }
 }
+
+
+/* Student tutoring offer */
+.student-offer {
+  max-width: 980px;
+  padding: 22px 26px;
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--accent);
+  border-radius: 8px;
+  background: var(--soft);
+}
+.student-offer h2 { margin-bottom: 14px; }
+.student-offer h3 {
+  margin: 0 0 12px;
+  color: var(--accent-dark);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+}
+.student-offer-content { max-width: 820px; }
+.student-offer p { margin: 0 0 12px; }
+.student-cta { margin-top: 4px; }
+@media (max-width: 560px) {
+  .student-offer { padding: 18px 16px; }
+}
