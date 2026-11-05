@@ -59,7 +59,7 @@
     "Publications | Lien Cartaya":"Publicaciones | Lien Cartaya","Talks | Lien Cartaya":"Charlas | Lien Cartaya",
     "For Students":"Para Estudiantes",
     "Need support with Precalculus, Calculus, or Linear Algebra?":"¿Necesitas apoyo con Precálculo, Cálculo o Álgebra Lineal?",
-    "I offer one-to-one lessons for high-school and university students in Talca and online. I hold a degree in Mathematics, a Master’s degree in Mathematics, and I am a Ph.D. candidate at Universidad de Talca.":"Ofrezco clases particulares para estudiantes de enseñanza media y universidad, en Talca y online. Soy licenciada en Matemáticas, tengo un magíster en Matemáticas y soy doctoranda en Matemáticas en la Universidad de Talca.",
+    "I offer one-to-one lessons for high-school and university students in Talca and online.":"Ofrezco clases particulares para estudiantes de enseñanza media y universidad, en Talca y online.",
     "Each lesson is adapted to your course and goals. We can work through your questions, class notes, or upcoming assessments, and build understanding step by step.":"Cada clase se adapta a tu curso y a tus objetivos. Podemos trabajar tus dudas, apuntes o evaluaciones, y avanzar paso a paso para que comprendas los contenidos con seguridad.",
     "Tell me which course and topics you need help with, and whether you prefer in-person lessons in Talca or online. I’ll reply so we can coordinate a time and rate.":"Cuéntame qué ramo y temas necesitas reforzar, y si prefieres clases presenciales en Talca u online. Te responderé para coordinar un horario y el valor de la clase.",
     "Ask about private lessons":"Consultar por clases particulares",
