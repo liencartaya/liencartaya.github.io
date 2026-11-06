@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f4ed">
+  <meta name="description" content="Flores & Proofs by Lien: papelería y marcapáginas para mentes curiosas, entre flores y teoremas. Diseñados en Talca, Chile.">
+  <title>Flores &amp; Proofs by Lien — Marcapáginas entre teoremas</title>
+  <style>
+    :root {
+      --paper: #f7f4ed;
+      --white: #fffefa;
+      --ink: #25241f;
+      --muted: #6f6b62;
+      --line: #e4dfd4;
+      --gold: #e7bc27;
+      --gold-deep: #b78e12;
+      --green: #49645a;
+      --plum: #68454f;
+      --serif: Georgia, 'Times New Roman', serif;
+      --sans: 'Avenir Next', Avenir, 'Segoe UI', sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+    a { color: inherit; }
+    .wrap { width: min(1160px, calc(100% - 48px)); margin-inline: auto; }
+    .topbar { height: 92px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+    .brand { display: flex; align-items: center; gap: 13px; text-decoration: none; }
+    .brand img { display: block; width: 176px; height: auto; max-height: 82px; object-fit: contain; mix-blend-mode: multiply; }
+    .brand:focus-visible { outline: 2px solid var(--green); outline-offset: 5px; border-radius: 2px; }
+    nav { display: flex; align-items: center; gap: 34px; font-size: 13px; }
+    nav a { text-decoration: none; color: #504d46; transition: color .2s; }
+    nav a:hover { color: var(--gold-deep); }
+    .nav-cta { border: 1px solid var(--ink); padding: 11px 16px; border-radius: 999px; }
+    .menu-button { display: none; background: transparent; border: 1px solid var(--line); border-radius: 50%; width: 42px; height: 42px; font-size: 18px; color: var(--ink); }
+    .hero { min-height: 690px; display: grid; grid-template-columns: 1.05fr .95fr; gap: 45px; align-items: center; padding: 68px 0 84px; }
+    .eyebrow { display: flex; align-items: center; gap: 10px; color: var(--green); font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+    .eyebrow:before { content: ''; width: 28px; height: 1px; background: currentColor; }
+    h1 { max-width: 590px; margin: 25px 0 20px; font-family: var(--serif); font-size: clamp(46px, 6.4vw, 82px); font-weight: 400; letter-spacing: -.065em; line-height: .99; }
+    h1 em { color: var(--green); font-weight: 400; }
+    .hero-copy { max-width: 440px; color: var(--muted); font-size: 16px; line-height: 1.75; }
+    .actions { display: flex; align-items: center; gap: 23px; margin-top: 34px; }
+    .button { display: inline-flex; justify-content: center; align-items: center; gap: 12px; min-height: 49px; padding: 0 21px; border-radius: 999px; background: var(--ink); color: white; font-size: 13px; text-decoration: none; transition: transform .2s, background .2s; }
+    .button:hover { transform: translateY(-2px); background: var(--green); }
+    .text-link { font-size: 13px; text-decoration: none; border-bottom: 1px solid #aaa398; padding-bottom: 5px; }
+    .location { margin-top: 58px; color: var(--muted); font-size: 12px; letter-spacing: .02em; }
+    .location span { color: var(--gold-deep); padding: 0 7px; }
+    .hero-art { min-height: 510px; position: relative; display: grid; place-items: center; }
+    .hero-halo { position: absolute; width: min(410px, 84%); aspect-ratio: 1; border-radius: 50%; background: #ece7d9; }
+    .hero-flower { position: absolute; width: min(300px, 66%); left: 6%; top: 2%; opacity: .22; transform: rotate(-10deg); }
+    .bookmark { position: absolute; overflow: hidden; box-shadow: 0 22px 50px #302c201c; border: 8px solid var(--white); border-radius: 4px; background: white; }
+    .bookmark img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .bookmark.one { width: 190px; height: 330px; left: 15%; top: 20%; transform: rotate(-10deg); z-index: 2; }
+    .bookmark.two { width: 185px; height: 320px; right: 11%; top: 13%; transform: rotate(9deg); z-index: 1; }
+    .bookmark.three { width: 172px; height: 290px; right: 20%; bottom: 1%; transform: rotate(4deg); z-index: 3; border-color: #fffefa; }
+    .orbit-note { position: absolute; left: 1%; bottom: 14%; z-index: 4; background: var(--white); padding: 12px 17px; box-shadow: 0 8px 24px #302c2014; font-family: var(--serif); font-size: 15px; transform: rotate(-4deg); }
+    .orbit-note small { display: block; margin-top: 3px; color: var(--muted); font-family: var(--sans); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; }
+    .collection { padding: 98px 0 105px; background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 38px; }
+    .section-kicker { margin: 0 0 12px; color: var(--gold-deep); font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+    h2 { margin: 0; font-family: var(--serif); font-size: clamp(36px, 4.4vw, 58px); font-weight: 400; letter-spacing: -.055em; line-height: 1.02; }
+    .section-intro { max-width: 300px; margin: 0 0 4px; color: var(--muted); font-size: 14px; line-height: 1.7; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .card { min-width: 0; }
+    .card-image { height: 390px; position: relative; overflow: hidden; display: grid; place-items: center; border-radius: 3px; background: #ede8dc; }
+    .card-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .45s; }
+    .card:hover .card-image img { transform: scale(1.035); }
+    .card:nth-child(2) .card-image { background: #292a27; }
+    .card:nth-child(2) .card-image img { object-fit: contain; padding: 25px; }
+    .card:nth-child(3) .card-image { background: #e9e5d8; }
+    .card-meta { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; margin-top: 16px; }
+    .card h3 { margin: 0; font-family: var(--serif); font-size: 21px; font-weight: 400; letter-spacing: -.025em; }
+    .card-number { color: #aaa398; font-family: var(--serif); font-size: 14px; }
+    .card p { margin: 7px 0 0; color: var(--muted); font-size: 12px; line-height: 1.55; }
+    .note-strip { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 42px auto 0; color: var(--muted); font-size: 12px; }
+    .note-strip:before, .note-strip:after { content: ''; width: 34px; height: 1px; background: var(--line); }
+    .about { padding: 110px 0; display: grid; grid-template-columns: .85fr 1.15fr; gap: 9%; align-items: center; }
+    .about-mark { position: relative; min-height: 330px; display: grid; place-items: center; background: #e9bc2a; overflow: hidden; }
+    .about-mark:before, .about-mark:after { content: ''; position: absolute; border: 1px solid #25241f2b; border-radius: 50%; width: 260px; height: 260px; }
+    .about-mark:after { width: 315px; height: 315px; }
+    .about-mark img { position: relative; z-index: 1; width: min(78%, 290px); mix-blend-mode: multiply; }
+    .about-copy { max-width: 540px; }
+    .about-copy h2 { margin-bottom: 20px; }
+    .about-copy p { color: var(--muted); font-size: 15px; line-height: 1.8; }
+    .about-signature { margin-top: 27px; color: var(--green); font-family: var(--serif); font-size: 19px; font-style: italic; }
+    .closing { background: #25241f; color: var(--white); padding: 60px 0; }
+    .closing-inner { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+    .closing p { max-width: 590px; margin: 0; font-family: var(--serif); font-size: clamp(27px, 3.5vw, 43px); letter-spacing: -.04em; line-height: 1.15; }
+    .closing p em { color: #e7bc27; font-weight: 400; }
+    .closing .button { flex: 0 0 auto; color: var(--ink); background: var(--white); }
+    .closing .button:hover { background: var(--gold); }
+    footer { background: #25241f; color: #c5c1b7; }
+    .footer-inner { min-height: 92px; border-top: 1px solid #ffffff26; display: flex; align-items: center; justify-content: space-between; gap: 20px; font-size: 11px; }
+    .footer-brand { color: var(--white); font-family: var(--serif); font-size: 15px; }
+    .footer-location { letter-spacing: .06em; text-transform: uppercase; }
+    @media (max-width: 850px) {
+      .hero { min-height: auto; grid-template-columns: 1fr 1fr; gap: 10px; padding: 70px 0 65px; }
+      .hero-art { min-height: 430px; }
+      .bookmark.one { width: 155px; height: 278px; left: 7%; }
+      .bookmark.two { width: 150px; height: 263px; right: 4%; }
+      .bookmark.three { width: 140px; height: 245px; right: 12%; }
+      .card-image { height: 330px; }
+      .about { gap: 6%; }
+    }
+    @media (max-width: 640px) {
+      .wrap { width: min(100% - 34px, 500px); }
+      .topbar { height: 76px; }
+      .brand img { width: 158px; max-height: 70px; }
+      .menu-button { display: block; }
+      nav { display: none; position: absolute; z-index: 10; top: 75px; left: 0; right: 0; padding: 22px 24px 24px; flex-direction: column; align-items: stretch; gap: 18px; background: var(--paper); border-bottom: 1px solid var(--line); }
+      nav.open { display: flex; }
+      nav a { padding: 5px 0; }
+      nav .nav-cta { text-align: center; }
+      .hero { grid-template-columns: 1fr; gap: 15px; padding: 56px 0 38px; }
+      h1 { margin-top: 21px; font-size: clamp(48px, 13vw, 68px); }
+      .hero-copy { font-size: 15px; }
+      .location { margin-top: 34px; }
+      .hero-art { min-height: 405px; margin-top: 10px; }
+      .hero-halo { width: 320px; }
+      .hero-flower { width: 220px; }
+      .bookmark.one { width: 145px; height: 250px; left: 9%; top: 14%; }
+      .bookmark.two { width: 142px; height: 242px; right: 7%; top: 10%; }
+      .bookmark.three { width: 133px; height: 228px; right: 18%; bottom: 0; }
+      .orbit-note { left: 0; bottom: 12%; font-size: 13px; }
+      .collection { padding: 74px 0 78px; }
+      .section-head { display: block; margin-bottom: 27px; }
+      .section-intro { margin-top: 15px; }
+      .cards { grid-template-columns: 1fr; gap: 29px; }
+      .card-image { height: 395px; }
+      .card:nth-child(2) .card-image img { padding: 20px; }
+      .about { grid-template-columns: 1fr; gap: 34px; padding: 75px 0; }
+      .about-mark { min-height: 270px; order: 2; }
+      .about-copy { order: 1; }
+      .closing { padding: 44px 0; }
+      .closing-inner { align-items: flex-start; flex-direction: column; }
+      .footer-inner { min-height: 84px; flex-wrap: wrap; padding: 19px 0; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *:before, *:after { transition-duration: .01ms !important; animation-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <header class="wrap topbar">
+    <a class="brand" href="#inicio" aria-label="Flores & Proofs by Lien, inicio">
+      <img src="assets/brand-logo-horizontal.webp" alt="Flowers &amp; Proofs by Lien: logotipo horizontal con ilustración floral">
+    </a>
+    <button class="menu-button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav aria-label="Navegación principal">
+      <a href="#coleccion">La colección</a>
+      <a href="#historia">La historia</a>
+      <a class="nav-cta" href="#coleccion">Ver diseños <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="wrap hero" id="inicio">
+      <div>
+        <div class="eyebrow">Papelería para mentes curiosas</div>
+        <h1>Flores &amp; Proofs<br><em>by Lien</em></h1>
+        <p class="hero-copy">Marcapáginas entre teoremas.</p>
+        <div class="actions">
+          <a class="button" href="#coleccion">Explorar los diseños <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#historia">Conocer la idea</a>
+        </div>
+        <p class="location">Diseñado en Talca, Chile <span>✳</span> por Lien</p>
+      </div>
+      <div class="hero-art" aria-label="Vista previa de los diseños florales y matemáticos">
+        <div class="hero-halo"></div>
+        <img class="hero-flower" src="assets/poppy-notes.webp" alt="" aria-hidden="true">
+        <div class="bookmark one"><img src="assets/graduate-texts.webp" alt="Diseño amarillo I read Graduate Texts in Mathematics"></div>
+        <div class="bookmark two"><img src="assets/poppy-notes.webp" alt="Diseño de flores rojas sobre fondo amarillo"></div>
+        <div class="bookmark three"><img src="assets/proofs-in-progress.webp" alt="Diseño de pizarra Proofs in Progress"></div>
+        <div class="orbit-note">para leer con pausa<small>y demostrar sin apuro</small></div>
+      </div>
+    </section>
+
+    <section class="collection" id="coleccion">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="section-kicker">Colección inicial · 01</p><h2>Pequeños compañeros<br>para grandes lecturas.</h2></div>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="card-image"><img src="assets/graduate-texts.webp" alt="Marcapáginas amarillo con el texto I read Graduate Texts in Mathematics" loading="lazy"></div>
+            <div class="card-meta"><h3>Graduate Texts</h3></div>
+          </article>
+          <article class="card">
+            <div class="card-image"><img src="assets/proofs-in-progress.webp" alt="Marcapáginas de pizarra con la frase Proofs in Progress" loading="lazy"></div>
+            <div class="card-meta"><h3>Proofs in Progress</h3></div>
+          </article>
+          <article class="card">
+            <div class="card-image"><img src="assets/iris-ideas.webp" alt="Flores ilustradas en tonos rosados y morados sobre fondo azul" loading="lazy"></div>
+            <div class="card-meta"><h3>Botanical Notes</h3></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap about" id="historia">
+      <div class="about-mark"><img src="assets/brand-logo-square.webp" alt="Logotipo cuadrado floral de Flowers & Proofs by Lien" loading="lazy"></div>
+      <div class="about-copy">
+        <p class="section-kicker">La historia detrás del nombre</p>
+        <h2>Un proyecto hecho entre libros y flores.</h2>
+        <p>Flowers &amp; Proofs nació de un día a día rodeado de matemáticas. Frente a mí, el computador y justo detrás la vista de un pequeño librero con libros de Springer y flores.</p>
+        <p>Quise convertir en marcapáginas ese pequeño mundo.</p>
+        <p>Conoce la primera colección Proofs in Progress.</p>
+        <div class="about-signature">Con cariño, Lien</div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="wrap closing-inner">
+        <p>Marcapáginas<br><em>entre teoremas.</em></p>
+        <a class="button" href="#coleccion">Volver a la colección <span aria-hidden="true">↑</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <div class="footer-brand">Flores &amp; Proofs by Lien</div>
+      <div class="footer-location">Diseñado en Talca, Chile</div>
+      <div>© <span id="year">2026</span> Flores &amp; Proofs</div>
+    </div>
+  </footer>
+  <script>
+    const button=document.querySelector('.menu-button');
+    const nav=document.querySelector('nav');
+    button.addEventListener('click',()=>{const open=nav.classList.toggle('open');button.setAttribute('aria-expanded',String(open));button.setAttribute('aria-label',open?'Cerrar menú':'Abrir menú');});
+    nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('open');button.setAttribute('aria-expanded','false');button.setAttribute('aria-label','Abrir menú');}));
+    document.getElementById('year').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
