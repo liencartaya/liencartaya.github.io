@@ -75,6 +75,16 @@
     .card h3 { margin: 0; font-family: var(--serif); font-size: 21px; font-weight: 400; letter-spacing: -.025em; }
     .card-number { color: #aaa398; font-family: var(--serif); font-size: 14px; }
     .card p { margin: 7px 0 0; color: var(--muted); font-size: 12px; line-height: 1.55; }
+    .collection-photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; margin-bottom: 40px; }
+    .collection-photo { margin: 0; }
+    .collection-photo img { display: block; width: 100%; height: auto; border-radius: 3px; }
+    .collection-photo figcaption { margin-top: 12px; color: var(--muted); font-family: var(--serif); font-size: 17px; }
+    .product-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 24px; border-top: 1px solid var(--line); }
+    .product-tile { padding: 20px 0; border-bottom: 1px solid var(--line); }
+    .product-tile h3 { margin: 0; font-family: var(--serif); font-size: 21px; font-weight: 400; }
+    .product-price { margin: 8px 0 0; color: var(--green); font-size: 13px; font-weight: 600; }
+    .price-note { max-width: 720px; margin: 23px 0 0; color: var(--muted); font-size: 11px; line-height: 1.7; }
+    .price-note a { text-underline-offset: 3px; }
     .note-strip { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 42px auto 0; color: var(--muted); font-size: 12px; }
     .note-strip:before, .note-strip:after { content: ''; width: 34px; height: 1px; background: var(--line); }
     .about { padding: 110px 0; display: grid; grid-template-columns: .85fr 1.15fr; gap: 9%; align-items: center; }
@@ -129,6 +139,8 @@
       .cards { grid-template-columns: 1fr; gap: 29px; }
       .card-image { height: 395px; }
       .card:nth-child(2) .card-image img { padding: 20px; }
+      .collection-photos { grid-template-columns: 1fr; }
+      .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .about { grid-template-columns: 1fr; gap: 34px; padding: 75px 0; }
       .about-mark { min-height: 270px; order: 2; }
       .about-copy { order: 1; }
@@ -177,22 +189,28 @@
     <section class="collection" id="coleccion">
       <div class="wrap">
         <div class="section-head">
-          <div><p class="section-kicker">Colección inicial · 01</p><h2>Pequeños compañeros<br>para grandes lecturas.</h2></div>
+          <div><p class="section-kicker">Volume I</p><h2>Proofs in Progress</h2></div>
+          <p class="section-intro">Seis marcapáginas para acompañar tus lecturas de matemáticas y tus pausas entre flores.</p>
         </div>
-        <div class="cards">
-          <article class="card">
-            <div class="card-image"><img src="assets/graduate-texts.webp" alt="Marcapáginas amarillo con el texto I read Graduate Texts in Mathematics" loading="lazy"></div>
-            <div class="card-meta"><h3>Graduate Texts</h3></div>
-          </article>
-          <article class="card">
-            <div class="card-image"><img src="assets/proofs-in-progress.webp" alt="Marcapáginas de pizarra con la frase Proofs in Progress" loading="lazy"></div>
-            <div class="card-meta"><h3>Proofs in Progress</h3></div>
-          </article>
-          <article class="card">
-            <div class="card-image"><img src="assets/iris-ideas.webp" alt="Flores ilustradas en tonos rosados y morados sobre fondo azul" loading="lazy"></div>
-            <div class="card-meta"><h3>Botanical Notes</h3></div>
-          </article>
+        <div class="collection-photos" aria-label="Fotografías originales de los marcapáginas">
+          <figure class="collection-photo">
+            <img src="assets/flowers-collection.jpg" alt="Fotografía original de los marcapáginas botánicos de la colección, sobre césped" loading="lazy" decoding="async">
+            <figcaption>Diseños botánicos</figcaption>
+          </figure>
+          <figure class="collection-photo">
+            <img src="assets/proofs-collection.jpg" alt="Fotografía original de los marcapáginas con diseños de lectura matemática, sobre césped" loading="lazy" decoding="async">
+            <figcaption>Diseños para lectores de matemáticas</figcaption>
+          </figure>
         </div>
+        <div class="product-grid" aria-label="Diseños disponibles">
+          <article class="product-tile"><h3>Proofs in Progress</h3><p class="product-price">CLP $2.000 · ≈ US$2.06</p></article>
+          <article class="product-tile"><h3>Graduate Texts</h3><p class="product-price">CLP $2.000 · ≈ US$2.06</p></article>
+          <article class="product-tile"><h3>Exercise for the Reader</h3><p class="product-price">CLP $2.000 · ≈ US$2.06</p></article>
+          <article class="product-tile"><h3>Botanical Blue</h3><p class="product-price">CLP $2.000 · ≈ US$2.06</p></article>
+          <article class="product-tile"><h3>Botanical Green</h3><p class="product-price">CLP $2.000 · ≈ US$2.06</p></article>
+          <article class="product-tile"><h3>Botanical Yellow</h3><p class="product-price">CLP $2.000 · ≈ US$2.06</p></article>
+        </div>
+        <p class="price-note">El equivalente en dólares estadounidenses es aproximado y usa el tipo de cambio observado de $969,80 CLP por USD del 10 de noviembre de 2026. <a href="https://si3.bcentral.cl/siete/EN/Siete/Cuadro/CAP_TIPO_CAMBIO/MN_TIPO_CAMBIO4/DOLAR_OBS_ADO?idSerie=F073.TCO.PRE.Z.D" target="_blank" rel="noreferrer">Fuente: Banco Central de Chile</a>; el valor puede variar.</p>
       </div>
     </section>
 
@@ -203,7 +221,7 @@
         <h2>Un proyecto hecho entre libros y flores.</h2>
         <p>Flowers &amp; Proofs nació de un día a día rodeado de matemáticas. Frente a mí, el computador y justo detrás, la vista de un pequeño espacio con libros de Springer y flores.</p>
         <p>Quise convertir en marcapáginas ese pequeño mundo.</p>
-        <p>Conoce la primera colección Proofs in Progress.</p>
+        <p>Conoce Volume I: Proofs in Progress.</p>
         <div class="about-signature">Con cariño, Lien</div>
       </div>
     </section>
