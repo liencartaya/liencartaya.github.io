@@ -49,16 +49,12 @@
     .location { margin-top: 58px; }
     .location-flower { display: block; width: 28px; height: auto; }
     .hero-art { min-height: 510px; position: relative; display: grid; place-items: center; }
-    .hero-halo { position: absolute; width: min(410px, 84%); aspect-ratio: 1; border-radius: 50%; background: #ece7d9; }
-    .hero-flower { position: absolute; width: min(300px, 66%); left: 6%; top: 2%; opacity: .22; transform: rotate(-10deg); }
-    .bookmark { position: absolute; overflow: hidden; box-shadow: 0 22px 50px #302c201c; border: 8px solid var(--white); border-radius: 4px; background: white; }
-    .bookmark img { display: block; width: 100%; height: 100%; object-fit: cover; }
-    .bookmark.one { width: 190px; height: 330px; left: 15%; top: 20%; transform: rotate(-10deg); z-index: 2; }
-    .bookmark.two { width: 185px; height: 320px; right: 11%; top: 13%; transform: rotate(9deg); z-index: 1; }
-    .bookmark.three { width: 172px; height: 290px; right: 20%; bottom: 1%; transform: rotate(4deg); z-index: 3; border-color: #fffefa; }
-    .orbit-note { position: absolute; left: 1%; bottom: 14%; z-index: 4; background: var(--white); padding: 12px 17px; box-shadow: 0 8px 24px #302c2014; font-family: var(--serif); font-size: 15px; transform: rotate(-4deg); }
-    .orbit-note small { display: block; margin-top: 3px; color: var(--muted); font-family: var(--sans); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; }
-    .collection { padding: 98px 0 105px; background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .hero-photo { position: absolute; display: block; margin: 0; overflow: hidden; border: 9px solid var(--white); border-radius: 5px; background: var(--white); box-shadow: 0 22px 50px #302c2026; }
+    .hero-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .hero-photo.one { width: 64%; height: 430px; left: 7%; top: 8%; transform: rotate(-8deg); z-index: 1; }
+    .hero-photo.two { width: 59%; height: 382px; right: 5%; bottom: 1%; transform: rotate(7deg); z-index: 2; }
+    .hero-photo figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 10px 8px; color: var(--ink); background: #fffefae8; text-align: center; font-family: var(--serif); font-size: 14px; }
+    .collection { padding: 98px 0 105px; background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); } padding: 98px 0 105px; background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
     .section-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 38px; }
     .section-kicker { margin: 0 0 12px; color: var(--gold-deep); font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
     h2 { margin: 0; font-family: var(--serif); font-size: clamp(36px, 4.4vw, 58px); font-weight: 400; letter-spacing: -.055em; line-height: 1.02; }
@@ -79,12 +75,13 @@
     .collection-photo { margin: 0; }
     .collection-photo img { display: block; width: 100%; height: auto; border-radius: 3px; }
     .collection-photo figcaption { margin-top: 12px; color: var(--muted); font-family: var(--serif); font-size: 17px; }
-    .product-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 24px; border-top: 1px solid var(--line); }
-    .product-tile { padding: 20px 0; border-bottom: 1px solid var(--line); }
-    .product-tile h3 { margin: 0; font-family: var(--serif); font-size: 21px; font-weight: 400; }
-    .product-price { margin: 8px 0 0; color: var(--green); font-size: 13px; font-weight: 600; }
-    .price-note { max-width: 720px; margin: 23px 0 0; color: var(--muted); font-size: 11px; line-height: 1.7; }
-    .price-note a { text-underline-offset: 3px; }
+    .product-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px 24px; }
+    .product-tile { min-width: 0; }
+    .product-tile h3 { margin: 0 0 14px; font-family: var(--serif); font-size: 21px; font-weight: 400; }
+    .product-sides { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+    .product-side { margin: 0; min-width: 0; }
+    .product-side img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 3px; }
+    .product-side figcaption { margin-top: 7px; color: var(--muted); text-align: center; font-size: 11px; letter-spacing: .04em; }
     .note-strip { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 42px auto 0; color: var(--muted); font-size: 12px; }
     .note-strip:before, .note-strip:after { content: ''; width: 34px; height: 1px; background: var(--line); }
     .about { padding: 110px 0; display: grid; grid-template-columns: .85fr 1.15fr; gap: 9%; align-items: center; }
@@ -107,9 +104,8 @@
     @media (max-width: 850px) {
       .hero { min-height: auto; grid-template-columns: 1fr 1fr; gap: 10px; padding: 70px 0 65px; }
       .hero-art { min-height: 430px; }
-      .bookmark.one { width: 155px; height: 278px; left: 7%; }
-      .bookmark.two { width: 150px; height: 263px; right: 4%; }
-      .bookmark.three { width: 140px; height: 245px; right: 12%; }
+      .hero-photo.one { width: 68%; height: 350px; left: 4%; }
+      .hero-photo.two { width: 62%; height: 318px; right: 2%; }
       .card-image { height: 330px; }
       .about { gap: 6%; }
     }
@@ -127,12 +123,10 @@
       .hero-copy { font-size: 15px; }
       .location { margin-top: 34px; }
       .hero-art { min-height: 405px; margin-top: 10px; }
-      .hero-halo { width: 320px; }
-      .hero-flower { width: 220px; }
-      .bookmark.one { width: 145px; height: 250px; left: 9%; top: 14%; }
-      .bookmark.two { width: 142px; height: 242px; right: 7%; top: 10%; }
-      .bookmark.three { width: 133px; height: 228px; right: 18%; bottom: 0; }
-      .orbit-note { left: 0; bottom: 12%; font-size: 13px; }
+      .hero-art { min-height: 390px; }
+      .hero-photo.one { width: 69%; height: 305px; left: 3%; top: 8%; }
+      .hero-photo.two { width: 64%; height: 278px; right: 2%; bottom: 0; }
+      .hero-photo figcaption { font-size: 12px; }
       .collection { padding: 74px 0 78px; }
       .section-head { display: block; margin-bottom: 27px; }
       .section-intro { margin-top: 15px; }
@@ -176,13 +170,9 @@
         </div>
         <p class="location"><img class="location-flower" src="assets/brand-flower.webp" alt="Buganvilia del logo"></p>
       </div>
-      <div class="hero-art" aria-label="Vista previa de los diseños florales y matemáticos">
-        <div class="hero-halo"></div>
-        <img class="hero-flower" src="assets/poppy-notes.webp" alt="" aria-hidden="true">
-        <div class="bookmark one"><img src="assets/graduate-texts.webp" alt="Diseño amarillo I read Graduate Texts in Mathematics"></div>
-        <div class="bookmark two"><img src="assets/poppy-notes.webp" alt="Diseño de flores rojas sobre fondo amarillo"></div>
-        <div class="bookmark three"><img src="assets/proofs-in-progress.webp" alt="Diseño de pizarra Proofs in Progress"></div>
-        <div class="orbit-note">Una pausa para leer.</div>
+      <div class="hero-art" aria-label="Fotografías de los marcapáginas sobre el césped">
+        <figure class="hero-photo one"><img src="assets/flowers-collection.jpg" alt="Marcapáginas botánicos fotografiados sobre el césped"></figure>
+        <figure class="hero-photo two"><img src="assets/proofs-collection.jpg" alt="Marcapáginas matemáticos fotografiados sobre el césped"><figcaption>Una pausa para leer.</figcaption></figure>
       </div>
     </section>
 
@@ -192,25 +182,50 @@
           <div><p class="section-kicker">Volume I</p><h2>Proofs in Progress</h2></div>
           <p class="section-intro">Seis marcapáginas para acompañar tus lecturas de matemáticas y tus pausas entre flores.</p>
         </div>
-        <div class="collection-photos" aria-label="Fotografías originales de los marcapáginas">
-          <figure class="collection-photo">
-            <img src="assets/flowers-collection.jpg" alt="Fotografía original de los marcapáginas botánicos de la colección, sobre césped" loading="lazy" decoding="async">
-            <figcaption>Diseños botánicos</figcaption>
-          </figure>
-          <figure class="collection-photo">
-            <img src="assets/proofs-collection.jpg" alt="Fotografía original de los marcapáginas con diseños de lectura matemática, sobre césped" loading="lazy" decoding="async">
-            <figcaption>Diseños para lectores de matemáticas</figcaption>
-          </figure>
+        <div class="product-grid" aria-label="Galería de diseños, frente y reverso">
+          <article class="product-tile">
+            <h3>Proofs in Progress</h3>
+            <div class="product-sides">
+              <figure class="product-side"><img src="assets/proofs-in-progress-front.jpg" alt="Proofs in Progress, frente" loading="lazy" decoding="async"><figcaption>Frente</figcaption></figure>
+              <figure class="product-side"><img src="assets/proofs-in-progress-back.jpg" alt="Proofs in Progress, reverso" loading="lazy" decoding="async"><figcaption>Reverso</figcaption></figure>
+            </div>
+          </article>
+          <article class="product-tile">
+            <h3>Graduate Texts</h3>
+            <div class="product-sides">
+              <figure class="product-side"><img src="assets/graduate-texts-front.jpg" alt="Graduate Texts, frente" loading="lazy" decoding="async"><figcaption>Frente</figcaption></figure>
+              <figure class="product-side"><img src="assets/graduate-texts-back.jpg" alt="Graduate Texts, reverso" loading="lazy" decoding="async"><figcaption>Reverso</figcaption></figure>
+            </div>
+          </article>
+          <article class="product-tile">
+            <h3>Exercise for the Reader</h3>
+            <div class="product-sides">
+              <figure class="product-side"><img src="assets/exercise-for-the-reader-front.jpg" alt="Exercise for the Reader, frente" loading="lazy" decoding="async"><figcaption>Frente</figcaption></figure>
+              <figure class="product-side"><img src="assets/exercise-for-the-reader-back.jpg" alt="Exercise for the Reader, reverso" loading="lazy" decoding="async"><figcaption>Reverso</figcaption></figure>
+            </div>
+          </article>
+          <article class="product-tile">
+            <h3>Botanical Blue</h3>
+            <div class="product-sides">
+              <figure class="product-side"><img src="assets/botanical-blue-front.jpg" alt="Botanical Blue, frente" loading="lazy" decoding="async"><figcaption>Frente</figcaption></figure>
+              <figure class="product-side"><img src="assets/botanical-blue-back.jpg" alt="Botanical Blue, reverso" loading="lazy" decoding="async"><figcaption>Reverso</figcaption></figure>
+            </div>
+          </article>
+          <article class="product-tile">
+            <h3>Botanical Green</h3>
+            <div class="product-sides">
+              <figure class="product-side"><img src="assets/botanical-green-front.jpg" alt="Botanical Green, frente" loading="lazy" decoding="async"><figcaption>Frente</figcaption></figure>
+              <figure class="product-side"><img src="assets/botanical-green-back.jpg" alt="Botanical Green, reverso" loading="lazy" decoding="async"><figcaption>Reverso</figcaption></figure>
+            </div>
+          </article>
+          <article class="product-tile">
+            <h3>Botanical Yellow</h3>
+            <div class="product-sides">
+              <figure class="product-side"><img src="assets/botanical-yellow-front.jpg" alt="Botanical Yellow, frente" loading="lazy" decoding="async"><figcaption>Frente</figcaption></figure>
+              <figure class="product-side"><img src="assets/botanical-yellow-back.jpg" alt="Botanical Yellow, reverso" loading="lazy" decoding="async"><figcaption>Reverso</figcaption></figure>
+            </div>
+          </article>
         </div>
-        <div class="product-grid" aria-label="Diseños disponibles">
-          <article class="product-tile"><h3>Proofs in Progress</h3><p class="product-price">CLP $2.000 · ≈ US$2.06</p></article>
-          <article class="product-tile"><h3>Graduate Texts</h3><p class="product-price">CLP $2.000 · ≈ US$2.06</p></article>
-          <article class="product-tile"><h3>Exercise for the Reader</h3><p class="product-price">CLP $2.000 · ≈ US$2.06</p></article>
-          <article class="product-tile"><h3>Botanical Blue</h3><p class="product-price">CLP $2.000 · ≈ US$2.06</p></article>
-          <article class="product-tile"><h3>Botanical Green</h3><p class="product-price">CLP $2.000 · ≈ US$2.06</p></article>
-          <article class="product-tile"><h3>Botanical Yellow</h3><p class="product-price">CLP $2.000 · ≈ US$2.06</p></article>
-        </div>
-        <p class="price-note">El equivalente en dólares estadounidenses es aproximado y usa el tipo de cambio observado de $969,80 CLP por USD del 10 de noviembre de 2026. <a href="https://si3.bcentral.cl/siete/EN/Siete/Cuadro/CAP_TIPO_CAMBIO/MN_TIPO_CAMBIO4/DOLAR_OBS_ADO?idSerie=F073.TCO.PRE.Z.D" target="_blank" rel="noreferrer">Fuente: Banco Central de Chile</a>; el valor puede variar.</p>
       </div>
     </section>
 
