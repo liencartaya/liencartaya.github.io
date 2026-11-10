@@ -75,11 +75,11 @@
     .collection-photo { margin: 0; }
     .collection-photo img { display: block; width: 100%; height: auto; border-radius: 3px; }
     .collection-photo figcaption { margin-top: 12px; color: var(--muted); font-family: var(--serif); font-size: 17px; }
-    .product-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px 24px; }
-    .product-tile { min-width: 0; }
-    .product-tile h3 { margin: 0 0 14px; font-family: var(--serif); font-size: 21px; font-weight: 400; }
-    .product-price { margin: -8px 0 11px; color: var(--green); font-size: 11px; letter-spacing: .04em; }
-    .product-sides { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+    .product-grid { display: flex; flex-direction: column; align-items: center; gap: clamp(42px, 9vh, 96px); }
+    .product-tile { width: min(100%, 900px); min-height: 78svh; display: flex; flex-direction: column; justify-content: center; }
+    .product-tile h3 { margin: 0 0 8px; font-family: var(--serif); font-size: clamp(26px, 3vw, 36px); font-weight: 400; text-align: center; }
+    .product-price { margin: 0 0 20px; color: var(--green); font-size: 11px; letter-spacing: .04em; text-align: center; }
+    .product-sides { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
     .product-side { margin: 0; min-width: 0; }
     .product-side img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 3px; }
     .product-side figcaption { margin-top: 7px; color: var(--muted); text-align: center; font-size: 11px; letter-spacing: .04em; }
@@ -139,7 +139,11 @@
       .card-image { height: 395px; }
       .card:nth-child(2) .card-image img { padding: 20px; }
       .collection-photos { grid-template-columns: 1fr; }
-      .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .product-grid { gap: 40px; }
+      .product-tile { min-height: 72svh; }
+      .product-tile h3 { font-size: 19px; }
+      .product-sides { gap: 8px; }
+      .product-price { margin-bottom: 14px; }
       .about { grid-template-columns: 1fr; gap: 34px; padding: 75px 0; }
       .about-mark { min-height: 270px; order: 2; }
       .about-copy { order: 1; }
